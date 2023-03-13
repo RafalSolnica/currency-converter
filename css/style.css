@@ -1,0 +1,33 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.container {
+  background-color: #222;
+  color: #ccc;
+  font-family: "Roboto", sans-serif;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.result {
+  padding-left: 5%;
+}
+
+.result--hidden {
+  display: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+  display: none;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
