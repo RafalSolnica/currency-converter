@@ -56,13 +56,13 @@
     const valuesInPLN = {
       PLN: 1,
       USD: 4.42,
-      EUR: 4.74,
-      GBP: 5.32,
-      CNH: 0.65,
-      AUD: 3.07,
-      CAD: 3.29,
-      CHF: 4.79,
-      JPY: 0.034,
+      EUR: 4.7,
+      GBP: 5.33,
+      CNY: 0.64,
+      AUD: 2.94,
+      CAD: 3.22,
+      CHF: 4.78,
+      JPY: 0.033,
     };
 
     return (

@@ -16,7 +16,7 @@ Jest to prosty konwerter walut wykonany przeze mnie jako praca domowa podczas na
 
 ## Jak to działa?
 
-W pierwszym polu należy wybrać z rozwijanej listy walutę początkową, w następnym polu jej ilość a w dalszej kolejności walutę na którą chcemy przekonwertować. Ostatecznie naciskamy przycisk "Przelicz" a przekonwertowana wartość wyświetli się pod formularzem. W przypadku nie wypełnienia pola wartości ów pole podświetli się na czerwono sygnalizując bład.
+W pierwszym polu należy wybrać z rozwijanej listy walutę początkową, w następnym polu jej ilość a w dalszej kolejności walutę na którą chcemy przekonwertować. Ostatecznie naciskamy przycisk "Przelicz" a przekonwertowana wartość wyświetli się pod formularzem. W przypadku nie wypełnienia pola wartości ów pole podświetli się na czerwono sygnalizując bład. Kursy walut pochodzą z Google Finanse z dnia 16.03.2023.
 
 ## Technologie użyte w projekcie:
 
