@@ -9,7 +9,7 @@ html {
 }
 
 .container {
-  background-color: #222;
+  background: url("../images/background.png");
   color: #ccc;
   font-family: "Roboto", sans-serif;
   max-width: 600px;
@@ -17,7 +17,8 @@ html {
 }
 
 .result {
-  padding-left: 5%;
+  margin-left: 5%;
+  background: rgba(33, 33, 33, 0.5);
 }
 
 .result--hidden {

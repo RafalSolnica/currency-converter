@@ -1,28 +1,25 @@
 # Rafał Solnica - Konwerter walut
 
-made as a homework project during the YouCode course for a Frontend Developer carrier.
-It was a great step in my education. I started to understand how JavaScript and CSS work.
+![Money](./images/share.png)
 
-## First time making a project where I combined:
+Jest to prosty konwerter walut wykonany przeze mnie jako praca domowa podczas nauki front-endu na kursie YouCode.
 
-- converting numbers by JavaScript
-- CSS background item
-- page's icon designed by me
+## Po raz pierwszy wykorzystałem w projekcie:
+
+- funkcje JavaScript odpowiadające za interaktywność strony
+- proste elementy walidacji formularzy
+- ikonę strony zaprojektowaną przeze mnie przy pomocy strony Canva: https://www.canva.com/
 
 ## Demo
 
-## https://mariahola.github.io/currency.converter/
+## https://rafalsolnica.github.io/currency-converter/
 
-### How it works?
+## Jak to działa?
 
-##### The placeholder is made to insert the money amount in PLN.
+W pierwszym polu należy wybrać z rozwijanej listy walutę początkową, w następnym polu jej ilość a w dalszej kolejności walutę na którą chcemy przekonwertować. Ostatecznie naciskamy przycisk "Przelicz" a przekonwertowana wartość wyświetli się pod formularzem. W przypadku nie wypełnienia pola wartości ów pole podświetli się na czerwono sygnalizując bład.
 
-##### Below you can choose the currency to convert, like: gold, bitcoin or Orlen stocks.
+## Technologie użyte w projekcie:
 
-##### After taking these steps you will see converted amount.
-
-### Project in a nutshell:
-
-- HTML, BEM convention, Normalize.css, JavaScript, CSS
-- minimalistic design
-- super easy-to-use converter
+- HTML, konwencja BEM, Normalize.css, JavaScript, CSS
+- minimalistyczny styl
+- prostota użytkowania
