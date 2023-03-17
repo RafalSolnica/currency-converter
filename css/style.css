@@ -8,12 +8,17 @@ html {
   box-sizing: inherit;
 }
 
-.container {
+body {
   background: url("../images/background.png");
+}
+
+.container {
   color: #ccc;
   font-family: "Roboto", sans-serif;
   max-width: 600px;
   margin: 0 auto;
+  display: flex;
+  flex-flow: column;
 }
 
 .result {

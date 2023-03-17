@@ -9,7 +9,7 @@
     <meta property="og:title" content="Rafał Solnica - Kantor walut">
     <meta property="og:type" content="website">
     <meta property="og:image"
-        content="https://github.com/RafalSolnica/currency-converter/blob/master/images/share.png?raw=true">
+        content="https://github.com/RafalSolnica/currency-converter/blob/master/images/README_background.png?raw=true">
     <meta property="og:description" content="Kantor walut - mój pierwszy projekt z wykorzystaniem funkcji JavaScript.">
     <link rel="icon" href="./images/icon3.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
@@ -25,77 +25,79 @@
     <title>Kantor walut</title>
 </head>
 
-<body class="container">
-    <form action="" class="form js-form">
-        <fieldset class="form__fieldset">
-            <legend class="form__legend">
-                Kantor walut
-            </legend>
-            <p>
-                <label class="form__label">
-                    <span class="form__text">
-                        Wybierz walutę
-                    </span>
-                    <select class="form__field form__field--select js-currency">
-                        <option class="form__option">PLN</option>
-                        <option class="form__option">USD</option>
-                        <option class="form__option">EUR</option>
-                        <option class="form__option">GBP</option>
-                        <option class="form__option">CNY</option>
-                        <option class="form__option">AUD</option>
-                        <option class="form__option">CAD</option>
-                        <option class="form__option">CHF</option>
-                        <option class="form__option">JPY</option>
-                    </select>
-                </label>
-            </p>
+<body>
+    <div class="container">
+        <form action="" class="form js-form">
+            <fieldset class="form__fieldset">
+                <legend class="form__legend">
+                    Kantor walut
+                </legend>
+                <p>
+                    <label class="form__label">
+                        <span class="form__text">
+                            Wybierz walutę
+                        </span>
+                        <select class="form__field form__field--select js-currency">
+                            <option class="form__option">PLN</option>
+                            <option class="form__option">USD</option>
+                            <option class="form__option">EUR</option>
+                            <option class="form__option">GBP</option>
+                            <option class="form__option">CNY</option>
+                            <option class="form__option">AUD</option>
+                            <option class="form__option">CAD</option>
+                            <option class="form__option">CHF</option>
+                            <option class="form__option">JPY</option>
+                        </select>
+                    </label>
+                </p>
 
-            <p>
-                <label class="form__label">
-                    <span class="form__text">
-                        Podaj wartość<span class="form__required">*</span>
-                    </span>
-                    <input type="number" class="form__field  js-amount" inputmode="numeric">
-                </label>
-            </p>
+                <p>
+                    <label class="form__label">
+                        <span class="form__text">
+                            Podaj wartość<span class="form__required">*</span>
+                        </span>
+                        <input type="number" class="form__field  js-amount" inputmode="numeric">
+                    </label>
+                </p>
 
-            <p>
-                <label class="form__label">
-                    <span class="form__text">
-                        Wybierz walutę
-                    </span>
-                    <select class="form__field form__field--select  js-convertedCurrency">
-                        <option class="form__option">PLN</option>
-                        <option class="form__option" selected>USD</option>
-                        <option class="form__option">EUR</option>
-                        <option class="form__option">GBP</option>
-                        <option class="form__option">CNY</option>
-                        <option class="form__option">AUD</option>
-                        <option class="form__option">CAD</option>
-                        <option class="form__option">CHF</option>
-                        <option class="form__option">JPY</option>
-                    </select>
-                </label>
-            </p>
+                <p>
+                    <label class="form__label">
+                        <span class="form__text">
+                            Wybierz walutę
+                        </span>
+                        <select class="form__field form__field--select  js-convertedCurrency">
+                            <option class="form__option">PLN</option>
+                            <option class="form__option" selected>USD</option>
+                            <option class="form__option">EUR</option>
+                            <option class="form__option">GBP</option>
+                            <option class="form__option">CNY</option>
+                            <option class="form__option">AUD</option>
+                            <option class="form__option">CAD</option>
+                            <option class="form__option">CHF</option>
+                            <option class="form__option">JPY</option>
+                        </select>
+                    </label>
+                </p>
 
-            <div class="form__buttonContainer">
-                <button class="form__button js-convert">
-                    Przelicz
-                </button>
-                <button type="reset" class="form__button js-reset">
-                    Wyczyść
-                </button>
-            </div>
+                <div class="form__buttonContainer">
+                    <button class="form__button js-convert">
+                        Przelicz
+                    </button>
+                    <button type="reset" class="form__button js-reset">
+                        Wyczyść
+                    </button>
+                </div>
 
-            <p>
-                Pola oznaczone symbolem <span class="form__required">*</span> są wymagane.
-            </p>
-        </fieldset>
-    </form>
+                <p>
+                    Pola oznaczone symbolem <span class="form__required">*</span> są wymagane.
+                </p>
+            </fieldset>
+        </form>
 
-    <p>
-        <strong class="result result--hidden js-result"></strong>
-    </p>
+        <p>
+            <strong class="result result--hidden js-result"></strong>
+        </p>
+    </div>
 </body>
 
 </html>

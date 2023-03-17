@@ -28,6 +28,8 @@ In case of not stating any amount of currency the field will highlight itself si
 
 ## In makeing of this project I used:
 
-- HTML, BEM convention, Normalize.css, JavaScript, CSS
+- HTML, BEM convention
+- CSS, Normalize.css, Flexbox
+- JavaScript ES6+ features
 - minimalistic graphic style
 - simplicity of use
