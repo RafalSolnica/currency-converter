@@ -1,10 +1,5 @@
 {
-  const convertElement = document.querySelector(".js-convert");
-  const amountElement = document.querySelector(".js-amount");
-  const resultElement = document.querySelector(".js-result");
-  const resetElement = document.querySelector(".js-reset");
-
-  const preventInvalidCharacters = (e) => {
+  const preventInvalidCharacters = (e, amountElement) => {
     const invalidCharacters = ["-", "+", "e"];
     const maxValue = 999999999999;
 
@@ -17,32 +12,29 @@
       e.preventDefault();
   };
 
-  const setErrorState = () => {
-    amountElement.classList.add("form__field--error");
-    resultElement.classList.add("result--hidden");
-  };
-
-  const removeErrorState = () => {
+  const removeErrorState = (amountElement) => {
     if (amountElement.value !== "")
       amountElement.classList.remove("form__field--error");
   };
 
-  const handleConversion = (e) => {
+  const setErrorState = (amountElement, resultElement) => {
+    amountElement.classList.add("form__field--error");
+    resultElement.classList.add("result--hidden");
+  };
+
+  const handleConversion = (e, amountElement, resultElement) => {
     e.preventDefault();
 
     const amount = amountElement.value;
     if (amount === "") {
-      setErrorState();
+      setErrorState(amountElement, resultElement);
       return;
     }
 
-    convertCurrencies(amount);
-
-    if (resultElement.classList.contains("result--hidden"))
-      resultElement.classList.toggle("result--hidden");
+    convertCurrencies(resultElement, amount);
   };
 
-  const convertCurrencies = (amount) => {
+  const convertCurrencies = (resultElement, amount) => {
     const currency = document.querySelector(".js-currency").value;
     const convertedCurrency = document.querySelector(
       ".js-convertedCurrency"
@@ -50,6 +42,7 @@
     const result = calculateResult(currency, convertedCurrency, amount);
 
     resultElement.innerText = `Przeliczona wartość wynosi: ${result} ${convertedCurrency}`;
+    resultElement.classList.remove("result--hidden");
   };
 
   const calculateResult = (currency, convertedCurrency, amount) => {
@@ -71,17 +64,30 @@
     ).toFixed(2);
   };
 
-  const resetForm = () => {
+  const resetForm = (amountElement, resultElement) => {
     amountElement.classList.remove("form__field--error");
     resultElement.classList.add("result--hidden");
   };
 
-  amountElement.addEventListener("keydown", (e) => {
-    preventInvalidCharacters(e);
-  });
-  amountElement.addEventListener("input", removeErrorState);
-  convertElement.addEventListener("click", (e) => {
-    handleConversion(e);
-  });
-  resetElement.addEventListener("click", resetForm);
+  const init = () => {
+    const amountElement = document.querySelector(".js-amount");
+    const convertElement = document.querySelector(".js-convert");
+    const resultElement = document.querySelector(".js-result");
+    const resetElement = document.querySelector(".js-reset");
+
+    amountElement.addEventListener("keydown", (e) => {
+      preventInvalidCharacters(e, amountElement);
+    });
+    amountElement.addEventListener("input", () => {
+      removeErrorState(amountElement);
+    });
+    convertElement.addEventListener("click", (e) => {
+      handleConversion(e, amountElement, resultElement);
+    });
+    resetElement.addEventListener("click", () => {
+      resetForm(amountElement, resultElement);
+    });
+  };
+
+  init();
 }
