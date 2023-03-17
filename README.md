@@ -1,25 +1,25 @@
-# Rafał Solnica - Konwerter walut
+# Rafał Solnica - Currency converter
 
-![Money](./images/share.png)
+![Money](./images/README_background.png)
 
-Jest to prosty konwerter walut wykonany przeze mnie jako praca domowa podczas nauki front-endu na kursie YouCode.
+Welcome to my simple currency converter that I've made as a homework during YouCode front-end course.
 
-## Po raz pierwszy wykorzystałem w projekcie:
+## For the first time I used in this project:
 
-- funkcje JavaScript odpowiadające za interaktywność strony
-- proste elementy walidacji formularzy
-- ikonę strony zaprojektowaną przeze mnie przy pomocy strony Canva: https://www.canva.com/
+- JavaScript functions
+- simple form validation
+- icon designed by me with the help of Canva website: https://www.canva.com/
 
 ## Demo
 
 ## https://rafalsolnica.github.io/currency-converter/
 
-## Jak to działa?
+## How does it work?
 
-W pierwszym polu należy wybrać z rozwijanej listy walutę początkową, w następnym polu jej ilość a w dalszej kolejności walutę na którą chcemy przekonwertować. Ostatecznie naciskamy przycisk "Przelicz" a przekonwertowana wartość wyświetli się pod formularzem. W przypadku nie wypełnienia pola wartości ów pole podświetli się na czerwono sygnalizując bład. Kursy walut pochodzą z Google Finanse z dnia 16.03.2023.
+In the first field choose starting currency, in second enter the amount, and then in the third select currency you want to convert into. Next click "Przelicz" button and result should show under the form. In case of not stating any amount of currency the field will highlight itself signaling error. Currency exchange rates originate from Google finance on March 16, 2023.
 
-## Technologie użyte w projekcie:
+## In makeing of this project I used:
 
-- HTML, konwencja BEM, Normalize.css, JavaScript, CSS
-- minimalistyczny styl
-- prostota użytkowania
+- HTML, BEM convention, Normalize.css, JavaScript, CSS
+- minimalistic graphic style
+- simplicity of use
