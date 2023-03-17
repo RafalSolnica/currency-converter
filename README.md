@@ -16,7 +16,15 @@ Welcome to my simple currency converter that I've made as a homework during YouC
 
 ## How does it work?
 
-In the first field choose starting currency, in second enter the amount, and then in the third select currency you want to convert into. Next click "Przelicz" button and result should show under the form. In case of not stating any amount of currency the field will highlight itself signaling error. Currency exchange rates originate from Google finance on March 16, 2023.
+In the first field choose starting currency, in second enter the amount, and then in the third select currency you want to convert into. Next click "Przelicz" button and result should show under the form.
+
+![Money](./images/example.gif)
+
+In case of not stating any amount of currency the field will highlight itself signaling error. The error will go away once correct value gets be entered or the form gets cleared with the "Wyczyść" button.
+
+![Money](./images/example_error.gif)
+
+#### Currency exchange rates originate from Google finance on March 16, 2023.
 
 ## In makeing of this project I used:
 
