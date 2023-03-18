@@ -1,11 +1,21 @@
 {
+  const invalidCharacters = ["-", "+", "e"];
+  const maxValue = 999999999999;
+  const currencies = {
+    PLN: 1,
+    USD: 4.42,
+    EUR: 4.7,
+    GBP: 5.33,
+    CNY: 0.64,
+    AUD: 2.94,
+    CAD: 3.22,
+    CHF: 4.78,
+    JPY: 0.033,
+  };
+
   const preventInvalidCharacters = (e, amountElement) => {
-    const invalidCharacters = ["-", "+", "e"];
-    const maxValue = 999999999999;
-
-    if (invalidCharacters.includes(e.key)) e.preventDefault();
-
     if (
+      invalidCharacters.includes(e.key) ||
       amountElement.value * 10 + e.key * 1 > maxValue ||
       (amountElement.value * 1 === maxValue && (e.key === "." || e.key === ","))
     )
@@ -26,15 +36,23 @@
     e.preventDefault();
 
     const amount = amountElement.value;
+
     if (amount === "") {
       setErrorState(amountElement, resultElement);
       return;
     }
 
-    convertCurrencies(resultElement, amount);
+    convertcurrencies(resultElement, amount);
   };
 
-  const convertCurrencies = (resultElement, amount) => {
+  const calculateResult = (currency, convertedCurrency, amount) => {
+    return (
+      (amount * currencies[currency]) /
+      currencies[convertedCurrency]
+    ).toFixed(2);
+  };
+
+  const convertcurrencies = (resultElement, amount) => {
     const currency = document.querySelector(".js-currency").value;
     const convertedCurrency = document.querySelector(
       ".js-convertedCurrency"
@@ -43,25 +61,6 @@
 
     resultElement.innerText = `Przeliczona wartość wynosi: ${result} ${convertedCurrency}`;
     resultElement.classList.remove("result--hidden");
-  };
-
-  const calculateResult = (currency, convertedCurrency, amount) => {
-    const valuesInPLN = {
-      PLN: 1,
-      USD: 4.42,
-      EUR: 4.7,
-      GBP: 5.33,
-      CNY: 0.64,
-      AUD: 2.94,
-      CAD: 3.22,
-      CHF: 4.78,
-      JPY: 0.033,
-    };
-
-    return (
-      (amount * valuesInPLN[currency]) /
-      valuesInPLN[convertedCurrency]
-    ).toFixed(2);
   };
 
   const resetForm = (amountElement, resultElement) => {
