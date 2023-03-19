@@ -1,12 +1,12 @@
 {
-  const preventInvalidCharacters = (e, amountElement) => {
+  const preventInvalidCharacters = (e, amount) => {
     const invalidCharacters = ["-", "+", "e"];
     const maxValue = 999999999999;
 
     if (
       invalidCharacters.includes(e.key) ||
-      amountElement.value * 10 + e.key * 1 > maxValue ||
-      (amountElement.value * 1 === maxValue && (e.key === "." || e.key === ","))
+      amount * 10 + e.key * 1 > maxValue ||
+      (amount * 1 === maxValue && (e.key === "." || e.key === ","))
     )
       e.preventDefault();
   };
@@ -76,7 +76,7 @@
     const resetElement = document.querySelector(".js-reset");
 
     amountElement.addEventListener("keydown", (e) => {
-      preventInvalidCharacters(e, amountElement);
+      preventInvalidCharacters(e, amountElement.value);
     });
     amountElement.addEventListener("input", () => {
       removeErrorState(amountElement);
