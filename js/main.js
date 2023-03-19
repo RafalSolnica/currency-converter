@@ -34,7 +34,7 @@
     convertCurrencies(resultElement, amount);
   };
 
-  const calculateResult = (currency, convertedCurrency, amount) => {
+  const getResult = (currency, convertedCurrency, amount) => {
     const currencies = {
       PLN: 1,
       USD: 4.42,
@@ -58,7 +58,7 @@
     const convertedCurrency = document.querySelector(
       ".js-convertedCurrency"
     ).value;
-    const result = calculateResult(currency, convertedCurrency, amount);
+    const result = getResult(currency, convertedCurrency, amount);
 
     resultElement.innerText = `Przeliczona wartość wynosi: ${result} ${convertedCurrency}`;
     resultElement.classList.remove("result--hidden");
