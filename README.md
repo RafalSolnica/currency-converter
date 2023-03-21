@@ -6,9 +6,9 @@ Welcome to my simple currency converter that I've made as a homework during YouC
 
 ## For the first time I used in this project:
 
-- JavaScript functions
-- simple form validation
-- icon designed by me with the help of Canva website: https://www.canva.com/
+-   JavaScript functions
+-   simple form validation
+-   icon designed by me with the help of Canva website: https://www.canva.com/
 
 ## Demo
 
@@ -26,10 +26,10 @@ In case of not stating any amount of currency the field will highlight itself si
 
 #### Currency exchange rates originate from Google finance on March 16, 2023.
 
-## In makeing of this project I used:
+## In making of this project I used:
 
-- HTML, BEM convention
-- CSS, Normalize.css, Flexbox
-- JavaScript ES6+ features
-- minimalistic graphic style
-- simplicity of use
+-   HTML, BEM convention
+-   CSS, Normalize.css, Flexbox
+-   JavaScript ES6+ features
+-   minimalistic graphic style
+-   simplicity of use
